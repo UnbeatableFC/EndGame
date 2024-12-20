@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Hanken Grotesk", Arial, Helvetica, sans-serif;
+  background-color: #262626;
+  color: #d9d9d9;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  text-align: center;
+}
+
+header h2 {
+  font-weight: 500;
+  color: #f9f4da;
+}
+
+header p {
+  text-align: center;
+  max-width: 550px;
+  color: #8e8e8e;
+}
+
+.status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #f9f4da;
+  justify-content: center;
+  min-height: 75px;
+  border-radius: 4px;
+  margin-block: 30px;
+}
+
+.status h3 {
+  font-size: 1.25rem;
+  margin: 5px;
+}
+
+.status p {
+  margin: 5px;
+}
+
+.status p.farewell-message {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.farewell {
+  background-color: #7a5ea7;
+  border: 1px dashed #323232;
+}
+
+.won {
+  background-color: #10a958;
+}
+
+.lost {
+  background-color: #ba2a2a;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 550px;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.lang-names {
+  padding: 4.5px;
+  border-radius: 3px;
+  position: relative;
+}
+
+span.lang-names.lost::before {
+  content: "💀";
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  font-size: 0.85rem;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.word {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.word span {
+  height: 40px;
+  width: 40px;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid white;
+  font-weight: 700;
+  
+}
+
+.word span .missed-letter  {
+  color: #ec5d49;
+}
+
+.keyboard {
+  display: flex;
+  max-width: 550px;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.keyboard button {
+  width: 35px;
+  height: 35px;
+  background-color: #fcba29;
+  border: 1px solid #d7d7d7;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.keyboard .correct {
+  background-color: #10a95b;
+}
+
+.keyboard .wrong {
+  background-color: #ec5d49;
+}
+
+.keyboard button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.btn {
+  background-color: #6ad5ff;
+  color: black;
+  /* max-width: 100px; */
+  padding: 5px 60px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
