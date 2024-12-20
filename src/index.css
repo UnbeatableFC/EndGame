@@ -112,10 +112,10 @@ span.lang-names.lost::before {
   align-items: center;
   border-bottom: 2px solid white;
   font-weight: 700;
-  
+  /* color: red; */
 }
 
-.word span .missed-letter  {
+.word span.missed-letter {
   color: #ec5d49;
 }
 
